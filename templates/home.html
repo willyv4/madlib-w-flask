@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Document</title>
+  </head>
+  {% include 'index.html' %}
+  <body>
+    <form method="POST" action="/story">
+      <h1>Add Words!!!</h1>
+      {% for word in word_list %}
+      <input type="text" placeholder="{{ word }}" name="{{ word }}" />
+      {% endfor %}
+      <button type="submit">SUBMIT</button>
+    </form>
+  </body>
+</html>
